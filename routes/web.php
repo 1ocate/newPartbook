@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+// For email verification
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
-
 use Illuminate\Http\Request;
 
 
@@ -28,10 +28,10 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+// For email verification Start.
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
-
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
@@ -46,5 +46,6 @@ Route::post('/email/verification-notification', function (Request $request) {
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 Route::get('/profile', function () {
-    // Only verified users may access this route...
 })->middleware('verified');
+
+// For email verification End.
