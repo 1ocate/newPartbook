@@ -18,14 +18,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 require __DIR__.'/auth.php';
 
 // For email verification Start.
@@ -42,10 +34,27 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();
 
-    return back()->with('message', 'Verification link sent!');
-})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+    return back()->with('alert', 'test!');
+})->middleware(['auth', 'throttle:3,1'])->name('verification.send');
 
 Route::get('/profile', function () {
 })->middleware('verified');
 
 // For email verification End.
+
+// For Normal page.
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('/test', function () {
+    return view('test');
+})->middleware(['auth'])->name('test');
+
+Route::get('/require', function () {
+    return view('require');
+});
