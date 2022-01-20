@@ -642,6 +642,12 @@ select {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mr-auto {
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -665,12 +671,6 @@ select {
 }
 .mt-6 {
   margin-top: 1.5rem;
-}
-.mr-auto {
-  margin-right: auto;
-}
-.ml-auto {
-  margin-left: auto;
 }
 .mt-5 {
   margin-top: 1.25rem;
@@ -1124,9 +1124,6 @@ select {
 }
 .blur {
   --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition {

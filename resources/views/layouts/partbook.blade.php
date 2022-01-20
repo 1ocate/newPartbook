@@ -34,13 +34,13 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon/favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('favicon/manifest.json') }}">
-
-    <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('favicon/apple-icon.png') }}">
     <link rel="icon" type="image/png" href="{{ asset('favicon/favicon.ico') }}">
+
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -140,7 +140,7 @@
 			// reading code number	
 			$( "#code" ).autocomplete({
 				minLength: 4,
-				source: 'data.php'
+				source: '/api/part'
 				/*select: function( event, ui ) {
 				
 				$( "#project-icon" ).attr( "src", "images/" + ui.item.icon );
@@ -201,7 +201,7 @@
 				let partname = $('#code').val();
 				const partno = partname.split(" ");
 
-					$.getJSON( "machine.php", {
+					$.getJSON( "/api/machine", {
 						term : request.term,
 						partno : partno[0]
 					}, response );
