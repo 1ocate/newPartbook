@@ -42,11 +42,6 @@ Route::get('/profile', function () {
 
 // For email verification End.
 
-// For Normal page.
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -55,6 +50,6 @@ Route::get('/test', function () {
     return view('test');
 })->middleware(['auth'])->name('test');
 
-Route::get('/require', function () {
+Route::get('/', function () {
     return view('require');
 });
