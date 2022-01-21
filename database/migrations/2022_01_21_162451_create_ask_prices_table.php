@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestLinesTable extends Migration
+class CreateAskPricesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateRequestLinesTable extends Migration
      */
     public function up()
     {
-        Schema::create('request_lines', function (Blueprint $table) {
+        Schema::create('ask_prices', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('request_id')->constrained();
-            $table->string('partname', 100);
-            $table->string('machine', 100);
-            $table->char('quality', 1);
-            $table->smallInteger('qty');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateRequestLinesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('request_lines');
+        Schema::dropIfExists('ask_prices');
     }
 }
