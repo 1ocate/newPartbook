@@ -1,4 +1,4 @@
-        <x-partbook-layout>
+<x-partbook-layout>
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -9,42 +9,11 @@
                                     <p class="card-category">Last Campaign Performance</p>-->
                                 </div>
                                 <div class="card-body ">
-                                    <form method="post" action="{{route('askprices.store')}}">
-                                        @csrf
-                                        <div class="form-group mt-5" id="dynamic_form">
-                                            <div class="row mb-5">
-                                                <div class="col-lg-4">
-                                                    <input type="text" name="partname" id="code" placeholder="Enter Code" class="form-control" >
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <input type="text" class="" name="machine" id="machine" placeholder="Enter machine" >
-                                                </div>
-                                                <div class="col-lg-2">
-                                                    <select class="form-control" name="quality" id="quality" >
-                                                        <option disabled="disabled" selected="selected" value="">Pilih Kualitas</option>
-                                                        <option value="0">Original</option>
-                                                        <option value="1">Non</option>
-                                                        <option value="2">Both</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-2">
-                                                    <input type="text" class="form-control"  name="qty" placeholder="Qty" id="qty" ></textarea>
-                                                </div>
-                                                <div class="col-lg-1">
-                                                    <a href="javascript:void(0)" class="btn-block btn btn-primary" id="plus5">Add</a>
-                                                </div> 
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h3 class="text-center">Part list</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <button type="submit" id="btnSubmit" class="btn btn-primary">Excel Download</button>
-                                    </form>
-                                    <!--<div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>-->
-                                    
+                                @foreach($askPrice->askPriceLines as $askpriceline)
+                                    <div>
+                                        {{$askpriceline->partname}}
+                                    </div>
+                                @endforeach 
                                 </div>
                             </div>
                         </div>

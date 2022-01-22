@@ -19,6 +19,11 @@
 <head>
     <title>Partbook.id - Free Find Part</title>
 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favicon/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('favicon/apple-icon-60x60.png') }}">
@@ -36,11 +41,7 @@
     <link rel="manifest" href="{{ asset('favicon/manifest.json') }}">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('favicon/apple-icon.png') }}">
     <link rel="icon" type="image/png" href="{{ asset('favicon/favicon.ico') }}">
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -115,7 +116,7 @@
 				$('#dynamic_form ').append(
 					'<div class="row">'
 					+ '<div class="col-9 mr-auto">'+code+' '+machine+' '+qty+'</div><div class="col-2"><a href="javascript:void(0)" class="btn btn-danger removeRow" id="minus5">X</a></div>'
-					+ '<input type="hidden" name="code[]" value="'+code+'" />'
+					+ '<input type="hidden" name="partname[]" value="'+code+'" />'
 					+ '<input type="hidden" name="machine[]" value="'+machine+'" />'
 					+ '<input type="hidden" name="quality[]" value="'+quality+'" />'
 					+ '<input type="hidden" name="qty[]" value="'+qty+'" />'

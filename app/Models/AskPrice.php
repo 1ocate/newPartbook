@@ -18,7 +18,7 @@ class AskPrice extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function askPriceLine()
+    public function askPriceLines()
     {
         return $this->hasMany(AskPriceLine::class);
         

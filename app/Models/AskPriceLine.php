@@ -20,11 +20,11 @@ class AskPriceLine extends Model
      // model rection
      public function user()
      {
-         return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
      }
      public function askPrice()
      {
-         return $this->belongsTo(AskPrice::class);
+        return $this->belongsTo(AskPrice::class);
          
      } 
 }
