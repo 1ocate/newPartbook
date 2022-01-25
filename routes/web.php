@@ -59,12 +59,8 @@ Route::prefix('askprices')->name('askprices.')->group(function () {
     //Route::middleware('auth')->group(function () {
         Route::post('/', [AskPricesController::class, 'store'])->name('store');
 
-        Route::get('/', function () {
-            return view('require');
-        });
-
-        Route::get('/result')->name('result');
-            return view('askprices.show');
+        Route::get('/result', [AskPricesController::class, 'result'])->name('result');
+        Route::get('/{askPrice}', [AskPricesController::class, 'show'])->name('show');
 
     //});
     /*Route::get('', function () {

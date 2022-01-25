@@ -6,6 +6,7 @@ use App\Models\AskPrice;
 use App\Models\AskPriceLine;
 use Auth;
 use Illuminate\Http\Request;
+use Session;
 
 class AskPricesController extends Controller
 {
@@ -54,18 +55,22 @@ class AskPricesController extends Controller
             AskPriceLine::create($askpriceline);
         }
 
-        return redirect()->route('askprices.result', ['askPrice' => $askPriceId]);
+        //session::put('askPriceIdey', 'value');
+        $request->session()->put('askPriceId', $askPriceId);
+        return redirect()->route('askprices.result');
+       
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\AskPrice  $askPrice
-     * @return \Illuminate\Http\Response
-     */
-    public function show(AskPrice $askPrice)
+
+    public function result(Request $request)
     {
-        return view('askprices.show', ['askPrice' => 1]);
+
+        $askPriceId = $request->session()->get('askPriceId');
+        $askPrice = AskPrice::find($askPriceId);
+
+        $request->session()->forget('askPriceId');
+        return view('askprices.show', compact('askPrice'));
+
     }
 
     /**

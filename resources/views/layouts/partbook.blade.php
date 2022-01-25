@@ -25,35 +25,38 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favicon/apple-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('favicon/apple-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('favicon/apple-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('favicon/apple-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('favicon/apple-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('favicon/apple-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('favicon/apple-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('favicon/apple-icon-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-icon-180x180.png') }}">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('favicon/android-icon-192x192.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon/favicon-96x96.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('favicon/manifest.json') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('favicon/apple-icon.png') }}">
-    <link rel="icon" type="image/png" href="{{ asset('favicon/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ secure_asset('favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ secure_asset('favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ secure_asset('favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ secure_asset('favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ secure_asset('favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ secure_asset('favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ secure_asset('favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ secure_asset('favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ secure_asset('favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ secure_asset('favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ secure_asset('favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ secure_asset('favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ secure_asset('favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ secure_asset('favicon/manifest.json') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ secure_asset('favicon/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ secure_asset('favicon/favicon.ico') }}">
     
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
     <!-- CSS Files -->
-    <link href="{{ asset('css/light-bootstrap-dashboard.css?v=2.0.0 ') }}" rel="stylesheet" />
-    <link href="{{ asset('css/bootstrap.css?v=2.0.0 ') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('css/light-bootstrap-dashboard.css?v=2.0.0 ') }}" rel="stylesheet" />
+    <!--<link href="{{ secure_asset('css/bootstrap.css?v=2.0.0 ') }}" rel="stylesheet" />-->
+    <link href="{{ secure_asset('css/demo.css ') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 	
     <!--   Core JS Files   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-    <script src="{{ asset('js/light-bootstrap-dashboard.js?v=2.0.0 ') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/light-bootstrap-dashboard.js?v=2.0.0 ') }}" type="text/javascript"></script>
     
 
     <!-- customize css & javascript -->
@@ -81,6 +84,14 @@
 	</style>
 
 	<script>
+
+        // bfcache remove
+        $(window).bind('pageshow', function(event){
+        if(event.originalEvent && event.originalEvent.persisted){
+            location.reload();
+        }
+        });
+
 		$(document).ready(function() {
 			
 			// if no input submit disable
