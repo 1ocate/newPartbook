@@ -57,7 +57,7 @@ Route::get('/machine', function(Request $request) {
             ->distinct()
             ->where('partno', $request->partno)
             ->where('machine', 'LIKE', '%'.$request->term.'%')
-            ->limit(5)->get();
+            ->get();
 
     $data = array();
     foreach ($parts as $part) {

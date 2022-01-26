@@ -15,11 +15,11 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Part Name</th>
-                                        <th scope="col">Machine</th>
-                                        <th scope="col">Qty</th>
-                                        <th scope="col">Quality</th>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Part Name</th>
+                                            <th scope="col">Machine</th>
+                                            <th scope="col">Qty</th>
+                                            <!--<th scope="col">Quality</th>-->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -29,7 +29,7 @@
                                             <td>{{$askpriceline->partno}} {{$askpriceline->partname}}</td>
                                             <td>{{$askpriceline->machine}} </td>
                                             <td>{{$askpriceline->qty}}</td>
-                                            <td>
+                                            <!--<td>
                                                 @switch($askpriceline->quality)
                                                     @case('0')
                                                         Original 
@@ -45,7 +45,7 @@
 
                                                 @endswitch
                                                 
-                                            </td>
+                                            </td>-->
                                             
                                         </tr>
                                         @endforeach  

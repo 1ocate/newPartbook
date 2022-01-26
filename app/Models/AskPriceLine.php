@@ -13,7 +13,7 @@ class AskPriceLine extends Model
         'ask_price_id',
         'partname',
         'machine',
-        'quality',
+      //  'quality',
         'qty',
     ];
 
