@@ -34,6 +34,7 @@ Route::get('/part', function(Request $request) {
             ->wherenotnull('partname')
             ->limit(5)->get();
 
+    $data = array();
     foreach ($parts as $part) {
         $data[] = $part->partno." ".$part->partname;
     }
@@ -55,17 +56,17 @@ Route::get('/machine', function(Request $request) {
     $parts = PartList::select('machine')
             ->distinct()
             ->where('partno', $request->partno)
-            ->where('partno', 'LIKE', '%'.$request->term.'%')
+            ->where('machine', 'LIKE', '%'.$request->term.'%')
             ->limit(5)->get();
 
+    $data = array();
     foreach ($parts as $part) {
+
         $data[] = $part->machine;
+
     }
+
     //return json data
     return json_encode($data);
 
-    //$result = new QuestionAnswerResource(Catmento_question::find($id));
-
-    // 한글 깨짐 방지
-    //return json_encode($result, JSON_UNESCAPED_UNICODE);
 });

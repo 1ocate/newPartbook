@@ -21,6 +21,11 @@ use Illuminate\Http\Request;
 
 require __DIR__.'/auth.php';
 
+Route::get('/', function () {
+    return redirect()->route('askprices.main');
+    
+}); 
+
 // For email verification Start.
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
@@ -51,14 +56,13 @@ Route::get('/test', function () {
     return view('test');
 })->middleware(['auth'])->name('test');
 
-Route::get('/', function () {
-    return view('require');
-});
-
-Route::prefix('askprices')->name('askprices.')->group(function () {
+Route::prefix('askprices')->name('askprices.')->middleware(['auth'])->group(function () {
     //Route::middleware('auth')->group(function () {
         Route::post('/', [AskPricesController::class, 'store'])->name('store');
 
+        Route::get('/', function () {
+            return view('require');
+        })->name('main');
         Route::get('/result', [AskPricesController::class, 'result'])->name('result');
         Route::get('/{askPrice}', [AskPricesController::class, 'show'])->name('show');
 

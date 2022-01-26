@@ -2,18 +2,59 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md">
+                        <div class="col-md-6">
                             <div class="card ">
                                 <div class="card-header ">
-                                   <!-- <h4 class="card-title">Email Statistics</h4>
-                                    <p class="card-category">Last Campaign Performance</p>-->
+                                    <h4 class="card-title">{{$askPrice->user->company}} </h4>
+                                    <p class="card-category">
+                                        {{$askPrice->user->company_address}} <br />
+                                        "{{$askPrice->user->name}}" &lt;{{$askPrice->user->email}}&gt;
+                                    </p>
                                 </div>
                                 <div class="card-body ">
-                                @foreach($askPrice->askPriceLines as $askpriceline)
-                                    <div>
-                                        {{$askpriceline->partname}}
-                                    </div>
-                                @endforeach 
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Part Name</th>
+                                        <th scope="col">Machine</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Quality</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($askPrice->askPriceLines as $askpriceline)
+                                        <tr>
+                                            <th scope="row">{{$loop->iteration}}</th>
+                                            <td>{{$askpriceline->partno}} {{$askpriceline->partname}}</td>
+                                            <td>{{$askpriceline->machine}} </td>
+                                            <td>{{$askpriceline->qty}}</td>
+                                            <td>
+                                                @switch($askpriceline->quality)
+                                                    @case('0')
+                                                        Original 
+                                                        @break
+
+                                                    @case('1')
+                                                        Kawe
+                                                        @break
+
+                                                    @case('2')
+                                                        Both
+                                                        @break
+
+                                                @endswitch
+                                                
+                                            </td>
+                                            
+                                        </tr>
+                                        @endforeach  
+                                    </tbody> 
+                                </table>
+                                </div>
+                                <div class="card-footer ">
+                                    <button type="submit" id="btnSubmit" class="btn btn-primary">Excel Download</button>
+                                    <button type="submit" id="btnSubmit" class="btn btn-danger">Home</button>
                                 </div>
                             </div>
                         </div>
@@ -44,13 +85,15 @@
                         <div class="col-md-6">
                             <div class="card ">
                                 <div class="card-header ">
-                                    <h4 class="card-title">2017 Sales</h4>
+                                    <h4 class="card-title">Part List</h4>
                                     <p class="card-category">All products including Taxes</p>
                                 </div>
                                 <div class="card-body ">
                                     <div id="chartActivity" class="ct-chart"></div>
                                 </div>
                                 <div class="card-footer ">
+                                <button type="submit" id="btnSubmit" class="btn btn-primary">Excel Download</button>
+                                    <button type="submit" id="btnSubmit" class="btn btn-danger">Home</button>
                                     <div class="legend">
                                         <i class="fa fa-circle text-info"></i> Tesla Model S
                                         <i class="fa fa-circle text-danger"></i> BMW 5 Series
@@ -58,11 +101,12 @@
                                     <hr>
                                     <div class="stats">
                                         <i class="fa fa-check"></i> Data information certified
-                                    </div>
+                                    </div>-->
                                 </div>
+                               
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <!--<div class="col-md-6">
                             <div class="card  card-tasks">
                                 <div class="card-header ">
                                     <h4 class="card-title">Tasks</h4>

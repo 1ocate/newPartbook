@@ -68,7 +68,7 @@ class AskPricesController extends Controller
         $askPriceId = $request->session()->get('askPriceId');
         $askPrice = AskPrice::find($askPriceId);
 
-        $request->session()->forget('askPriceId');
+        //$request->session()->forget('askPriceId');
         return view('askprices.show', compact('askPrice'));
 
     }
