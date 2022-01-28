@@ -19,6 +19,20 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
+            <!-- Company -->
+            <div class="mt-4">
+                <x-label for="company" :value="__('Company')" />
+
+                <x-input id="company" class="block mt-1 w-full" type="text" name="company" :value="old('company')" required autofocus />
+            </div>
+
+            <!-- Company Adrress -->
+            <div class="mt-4">
+                <x-label for="company_address" :value="__('Company adress')" />
+
+                <x-input id="company_address" class="block mt-1 w-full" type="text" name="company_address" :value="old('company_address')" required autofocus />
+            </div class="mt-4">
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />

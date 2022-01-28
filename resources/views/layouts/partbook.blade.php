@@ -182,9 +182,19 @@
                                 </div>
                             </li>-->
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Log out</span>
-                                </a>
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-responsive-nav-link :href="route('logout')" class="nav-link"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        <span class="no-icon">{{ __('Log Out') }} </span>
+                                    </x-responsive-nav-link>
+                                </form>
+                                <!--<a class="nav-link" href="#pablo">
+                                    Log out
+                                </a>-->
                             </li>
                         </ul>
                     </div>

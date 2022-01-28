@@ -65,6 +65,7 @@ Route::prefix('askprices')->name('askprices.')->middleware(['auth'])->group(func
         })->name('main');
         Route::get('/result', [AskPricesController::class, 'result'])->name('result');
         Route::get('/{askPrice}', [AskPricesController::class, 'show'])->name('show');
+        Route::get('/result/export/', [AskPricesController::class, 'export'])->name('excel');
 
     //});
     /*Route::get('', function () {

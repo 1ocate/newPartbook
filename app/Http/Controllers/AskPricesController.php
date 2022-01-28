@@ -7,6 +7,7 @@ use App\Models\AskPriceLine;
 use Auth;
 use Illuminate\Http\Request;
 use Session;
+use App\Exports\AskPriceExport;
 
 class AskPricesController extends Controller
 {
@@ -105,5 +106,15 @@ class AskPricesController extends Controller
     public function destroy(AskPrice $askPrice)
     {
         //
+    }
+    
+    public function export(Request $request)
+    {
+        //return Excel::download(new AskPriceExport, 'users.xlsx');
+        $askPriceId = $request->session()->get('askPriceId');
+        $request->session()->forget('askPriceId');
+        //return Excel::download(new AskPriceExport, 'result.xlsx');
+        return (new AskPriceExport($askPriceId))->download('result.xlsx');
+        
     }
 }
