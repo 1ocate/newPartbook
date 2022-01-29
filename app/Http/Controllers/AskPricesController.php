@@ -39,6 +39,7 @@ class AskPricesController extends Controller
      */
     public function store(Request $request)
     {
+        // Read user id
         $request->merge(['user_id' => Auth::user()->id ]);
 
         $askPrice = AskPrice::create($request->all());

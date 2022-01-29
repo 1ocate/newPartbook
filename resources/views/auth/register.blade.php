@@ -23,14 +23,40 @@
             <div class="mt-4">
                 <x-label for="company" :value="__('Company')" />
 
-                <x-input id="company" class="block mt-1 w-full" type="text" name="company" :value="old('company')" required autofocus />
+                <x-input id="company" class="block mt-1 w-full" type="text" name="company" :value="old('company')" required />
             </div>
 
-            <!-- Company Adrress -->
+            <!-- Company Type-->
+            <div class="flex justify-start mt-1">
+                <div class="form-check form-check-inline mr-2">
+                    <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-1 cursor-pointer" type="radio" name="company_type" id="company_factory" value="F" required>
+                    <label class="form-check-label inline-block font-medium text-sm text-gray-700 mr-2" for="company_factory">Factory</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-1 cursor-pointer" type="radio" name="company_type" id="company_vender" value="V" >
+                    <label class="form-check-label inline-block font-medium text-sm text-gray-700" for="company_vender">Vander</label>
+                </div>
+            </div>
+            
+            <!-- Company Category -->
             <div class="mt-4">
-                <x-label for="company_address" :value="__('Company adress')" />
+                <x-label for="company_category" :value="__('Factory Category ( Jika anda Pabrik di isi
+                guna menampilkan data part  lebih akurat) ')" />
+                <select name="company_category" id="company_category" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full">
+                    <option disabled="disabled" selected="selected" value="">Select</option>
+                    <option value="0">Garment</option>
+                    <option value="1">Bra - Under ware</option>
+                    <option value="2">Bag Production</option>
+                    <option value="3">Shoes Production</option>
+                </select>
+            </div>
 
-                <x-input id="company_address" class="block mt-1 w-full" type="text" name="company_address" :value="old('company_address')" required autofocus />
+            <!-- Company Address -->
+            <div class="mt-4">
+                <x-label for="company_address" :value="__('Company Address')" />
+
+
+                <x-input id="company_address" class="block mt-1 w-full" type="text" name="company_address" :value="old('company_address')" required />
             </div class="mt-4">
 
             <!-- Email Address -->
