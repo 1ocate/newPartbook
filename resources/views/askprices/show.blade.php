@@ -53,8 +53,8 @@
                                 </table>
                                 </div>
                                 <div class="card-footer ">
-                                    <a href='{{route("askprices.excel")}}' class='btn btn-primary'>Excel Download</a>
-                                    <a href='{{route("askprices.main")}}' class='btn btn-danger'>home</a>
+                                    <a href='{{route("askprices.excel")}}' class='btn btn-primary'>Save Excel</a>
+                                    <a href='{{route("askprices.main")}}' class='btn btn-danger'>Home</a>
                                 </div>
                             </div>
                         </div>

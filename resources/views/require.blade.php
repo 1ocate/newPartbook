@@ -52,7 +52,7 @@
 
                     // require form value				
                     if(partname==''){
-                        alert("Please input Partname");
+                        alert("Please input Part No");
                         $( "#partname" ).focus();
                         return false;
                     
@@ -246,14 +246,15 @@
                             </div>
                         </div>-->
                     </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <p class="text-justify">
-                                * Masukan Isian data form ini sesuai urutan field yang diberikan, untuk mencegah kesalahan data <br />
-                                * Jika setelah menginput part no, lalu tidak terdapat Nama mesin, kemungkinan besar part no yang dimasukan salah. / khusus anda pabrik, dapat mengemail pada kami di <a href="mailto:info@partbook.id">info@partbook.id</a>
-                            </p>
-                         </div>
-                    </div>
                 </div>
+
+                <!-- Information -->
+                <div class="col-md">
+                    <p class="text-justify">
+                        * Masukan Isian data form ini sesuai urutan field yang diberikan, untuk mencegah kesalahan data <br />
+                        * Jika setelah menginput part no, lalu tidak terdapat Nama mesin, kemungkinan besar part no yang dimasukan salah. / khusus anda pabrik, dapat mengemail pada kami di <a href="mailto:info@partbook.id">info@partbook.id</a>
+                    </p>
+                </div>
+
             </div>
         </x-partbook-layout>

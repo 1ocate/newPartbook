@@ -115,7 +115,9 @@ class AskPricesController extends Controller
         $askPriceId = $request->session()->get('askPriceId');
         $request->session()->forget('askPriceId');
         //return Excel::download(new AskPriceExport, 'result.xlsx');
-        return (new AskPriceExport($askPriceId))->download('result.xlsx');
+        $company = Auth::user()->company;
+        $todayDate = date('ymd');
+        return (new AskPriceExport($askPriceId))->download($company.'_'.$todayDate.'.xlsx');
         
     }
 }
