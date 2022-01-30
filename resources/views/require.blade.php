@@ -184,7 +184,7 @@
 
             <div class="content">
                 <div class="container-fluid" id="mainbox" >
-                    <div class="row">
+                    <div class="row ">
                         <div class="col-md-auto">
                             <div class="card ">
                                 <!--<div class="card-header ">
@@ -192,14 +192,15 @@
                                     <p class="card-category">Last Campaign Performance</p>
                                 </div>-->
                                 <div class="card-body ">
-                                    <div class="form-row align-items-center" id="dynamic_form">
+                                    <div class="form-row align-items-top" id="dynamic_form">
                                         <div class="col-sm-4 my-1">
                                             <label class="sr-only" for="partname">Part Name</label>
-                                            <input type="text" class="form-control" name="partname" id="partname" placeholder="Enter Partname"  >
+                                            <input type="text" class="form-control" name="partname" id="partname" placeholder="1) Enter *Part No"  >
+                                            <small id="partnamehelp" class="form-text text-muted">*Mohon Isi Minimal 4 Digit</small>
                                         </div>
                                         <div class="col-sm-4 my-1">
                                             <label class="sr-only" for="machine">Machine</label>
-                                            <input type="text" class="form-control" name="machine" id="machine" placeholder="Enter machine"  >
+                                            <input type="text" class="form-control" name="machine" id="machine" placeholder="2) Enter machine"  >
                                         </div>
                                         <!--<div class="col-sm-2 my-1">
                                             <label class="sr-only" for="quality">Quality</label>
@@ -212,7 +213,7 @@
                                         </div>-->
                                         <div class="col-sm-2 my-1">
                                             <label class="sr-only" for="quality">Qty</label>
-                                            <input type="text" class="form-control" type="number" name="qty" placeholder="Qty" id="qty" maxlength="4" size="4" onkeyup = "if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"; ></textarea>
+                                            <input type="text" class="form-control" type="number" name="qty" placeholder="3) Qty" id="qty" maxlength="4" size="4" onkeyup = "if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"; ></textarea>
                                         </div>
                                         <div class="col-sm-2 my-1">
                                                 <a href="javascript:void(0)" class="btn-block btn btn-primary" id="plus5">Add</a>
@@ -244,6 +245,14 @@
                                 </div>
                             </div>
                         </div>-->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="text-justify">
+                                * Masukan Isian data form ini sesuai urutan field yang diberikan, untuk mencegah kesalahan data <br />
+                                * Jika setelah menginput part no, lalu tidak terdapat Nama mesin, kemungkinan besar part no yang dimasukan salah. / khusus anda pabrik, dapat mengemail pada kami di <a href="mailto:info@partbook.id">info@partbook.id</a>
+                            </p>
+                         </div>
                     </div>
                 </div>
             </div>

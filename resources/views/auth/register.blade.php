@@ -34,7 +34,7 @@
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-1 cursor-pointer" type="radio" name="company_type" id="company_vender" value="V" >
-                    <label class="form-check-label inline-block font-medium text-sm text-gray-700" for="company_vender">Vander</label>
+                    <label class="form-check-label inline-block font-medium text-sm text-gray-700" for="company_vender">Vender</label>
                 </div>
             </div>
             
@@ -43,7 +43,7 @@
                 <x-label for="company_category" :value="__('Factory Category ( Jika anda Pabrik di isi
                 guna menampilkan data part  lebih akurat) ')" />
                 <select name="company_category" id="company_category" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full">
-                    <option disabled="disabled" selected="selected" value="">Select</option>
+                    <option disabled="disabled" selected="selected" value="">Select Factory Category</option>
                     <option value="0">Garment</option>
                     <option value="1">Bra - Under ware</option>
                     <option value="2">Bag Production</option>

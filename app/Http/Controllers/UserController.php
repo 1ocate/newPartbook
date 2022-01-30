@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class UserController extends Controller
 {
@@ -61,6 +62,7 @@ class UserController extends Controller
     {
         //
     }
+    
 
     /**
      * Update the specified resource in storage.
@@ -69,10 +71,14 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
-        //
+
+        $user_id = Auth::user()->id;
+        $user = User::find($user_id)->update($request->all());
+        return redirect()->route('user.show');
     }
+
 
     /**
      * Remove the specified resource from storage.

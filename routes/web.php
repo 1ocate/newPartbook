@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AskPricesController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 // For email verification
@@ -55,6 +56,11 @@ Route::get('/dashboard', function () {
 Route::get('/test', function () {
     return view('test');
 })->middleware(['auth'])->name('test');
+
+Route::prefix('user')->name('user.')->middleware(['auth'])->group(function () {
+    Route::get('/', [UserController::class, 'show'])->name('show');
+    Route::put('/', [UserController::class, 'update'])->name('update');
+});
 
 Route::prefix('askprices')->name('askprices.')->middleware(['auth'])->group(function () {
     //Route::middleware('auth')->group(function () {
