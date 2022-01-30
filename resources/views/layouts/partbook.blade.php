@@ -17,7 +17,7 @@
 <html lang="en">
 
 <head>
-    <title>Partbook.id - Free Find Part</title>
+    <title>PARTBOOK.ID - Informasi Sparepart Mesin Produksi terlengkap dan terupdate</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-17MSL1BZRK"></script>

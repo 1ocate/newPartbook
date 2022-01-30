@@ -18,16 +18,16 @@
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
          <!-- meta for share or search -->
-        <meta property="og:url" content="https://partbook.co.id/">
-        <meta property="og:title" content="PARTBOOK.ID">
+        <meta property="og:url" content="https://partbook.id/">
+        <meta property="og:title" content="PARTBOOK.ID - Informasi Sparepart Mesin Produksi terlengkap dan terupdate">
         <meta property="og:type" content="website">
         <meta property="og:image" content="{{ secure_asset('favicon/apple-icon-180x180.png')}}">
-        <meta property="og:description" content="site pertama referensi part no yang akurat dengan standard international.">
+        <meta property="og:description" content="site pertama referensi part no mesin yang akurat dengan standard international.">
 
-        <meta name="description" content="site pertama referensi part no yang akurat dengan standard international.">
+        <meta name="description" content="site pertama referensi part no mesin yang akurat dengan standard international.">
         <meta name="keywords" content="partbook,part">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>PARTBOOK.ID - Informasi Sparepart Mesin Produksi terlengkap dan terupdate</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
