@@ -39,6 +39,9 @@ class AskPricesController extends Controller
      */
     public function store(Request $request)
     {
+        // Reset session value
+        $request->session()->forget('askPriceId');
+
         // Read user id
         $request->merge(['user_id' => Auth::user()->id ]);
 
@@ -113,7 +116,7 @@ class AskPricesController extends Controller
     {
         //return Excel::download(new AskPriceExport, 'users.xlsx');
         $askPriceId = $request->session()->get('askPriceId');
-        $request->session()->forget('askPriceId');
+        //$request->session()->forget('askPriceId');
         //return Excel::download(new AskPriceExport, 'result.xlsx');
         $company = Auth::user()->company;
         $todayDate = date('ymd');
