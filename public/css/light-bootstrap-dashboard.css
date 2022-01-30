@@ -52,6 +52,10 @@
 
 /*           Font Smoothing      */
 
+body{
+    overflow-x: hidden;
+}
+
 body,
 h1,
 .h1,

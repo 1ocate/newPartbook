@@ -84,7 +84,7 @@
                         +                        '<table class="table">'
                         +                            '<thead>'
                         +                                '<tr>'
-                        +                                    '<th scope="col">No</th>'
+                    //    +                                    '<th scope="col">No</th>'
                         +                                    '<th scope="col">Part Name</th>'
                         +                                    '<th scope="col">Machine</th>'
                         +                                    '<th scope="col">Qty</th>'
@@ -107,7 +107,7 @@
                     $('#askList').append(
 
                         '<tr class="rowAskList">'
-                        + '<th scope="row">'+lineNo+'</th>'
+                    //    + '<th scope="row">'+lineNo+'</th>'
                         +   '<td>'+partname+'</td>'
                         +   '<td>'+machine+'</td>'
                         +   '<td>'+qty+'</td>'
