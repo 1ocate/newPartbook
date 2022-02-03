@@ -34,8 +34,8 @@
                     <label class="form-check-label inline-block font-medium text-sm text-gray-700 mr-2" for="company_factory">Factory</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-1 cursor-pointer" type="radio" name="company_type" id="company_vender" value="V" {{ (Auth::user()->company_type=="V")? "checked" : "" }} >
-                    <label class="form-check-label inline-block font-medium text-sm text-gray-700" for="company_vender">Vender</label>
+                    <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-1 cursor-pointer" type="radio" name="company_type" id="company_vendor" value="V" {{ (Auth::user()->company_type=="V")? "checked" : "" }} >
+                    <label class="form-check-label inline-block font-medium text-sm text-gray-700" for="company_vendor">Vendor</label>
                 </div>
             </div>
             
