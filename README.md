@@ -1,8 +1,7 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/29521447/152291917-5128eafc-ff35-4a59-a1a4-1e0a04d604bb.svg">
 </p>
-
-## About Laravel
+## About PartBook
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
