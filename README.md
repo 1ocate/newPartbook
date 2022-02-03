@@ -5,9 +5,7 @@
 ## About PartBook
 
 Partbook Reference for your Production Machine and Excel generator.
-
 Database and Information on Production Machine Spare Parts, along with the most complete and updated Part No. 
-
 This tool can assist Production Performance, also helps in accelerating the creation of an excel list of spare parts needs.
 
 1. Prevent mistakes in purchasing spare parts. 
