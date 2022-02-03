@@ -5,7 +5,7 @@
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
         </x-slot>
-        <div class="">
+        <div class="mb-3">
             <h1 class="text-center text-xl mb-5">PartBook.ID</h1>
             <p class="text-center mb-5">
                 Refensi Partbook untuk Mesin produksi anda dan Excell generator <br /><br />

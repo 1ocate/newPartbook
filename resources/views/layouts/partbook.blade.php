@@ -59,14 +59,15 @@
     <!-- CSS Files -->
     <link href="{{ secure_asset('css/light-bootstrap-dashboard.css?v=2.0.0 ') }}" rel="stylesheet" />
     <!--<link href="{{ secure_asset('css/bootstrap.css?v=2.0.0 ') }}" rel="stylesheet" />-->
-    <link href="{{ secure_asset('css/demo.css ') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 	
     <!--   Core JS Files   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-    <script src="{{ secure_asset('js/light-bootstrap-dashboard.js?v=2.0.0 ') }}" type="text/javascript"></script>
+    <script src="https://demos.creative-tim.com/light-bootstrap-dashboard/assets/js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+    <script src="https://demos.creative-tim.com/light-bootstrap-dashboard/assets/js/demo.js" type="text/javascript"></script>
+
     
 
     
