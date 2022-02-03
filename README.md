@@ -1,8 +1,5 @@
-![Screen Recording 2022-02-03 at 12 59 15 PM](https://user-images.githubusercontent.com/29521447/152290599-b5e2b594-8e51-4f67-915e-dfa3088c3c1e.gif)
 <p align="center">
 <img src="https://user-images.githubusercontent.com/29521447/152291917-5128eafc-ff35-4a59-a1a4-1e0a04d604bb.svg">
-
-
 </p>
 
 ## About Laravel
@@ -16,3 +13,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - Database agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+
+![Screen Recording 2022-02-03 at 1 26 04 PM](https://user-images.githubusercontent.com/29521447/152292645-bf2e53e0-dcec-4c28-8124-ec77b7dd5254.gif)
+![Screen Shot 2022-02-03 at 1 29 51 PM](https://user-images.githubusercontent.com/29521447/152292669-6ad0f080-5c58-495d-9a0d-ed40b8381764.png)
