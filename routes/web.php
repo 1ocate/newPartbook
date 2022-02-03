@@ -23,7 +23,7 @@ use Illuminate\Http\Request;
 require __DIR__.'/auth.php';
 
 Route::get('/', function () {
-    return redirect()->route('askprices.main');
+    return view('index');
     
 }); 
 
