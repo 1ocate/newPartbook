@@ -52,7 +52,7 @@
 
 /*           Font Smoothing      */
 
-body{
+html,body{
     overflow-x: hidden;
 }
 
