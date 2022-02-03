@@ -1,6 +1,8 @@
 ![Screen Recording 2022-02-03 at 12 59 15 PM](https://user-images.githubusercontent.com/29521447/152290599-b5e2b594-8e51-4f67-915e-dfa3088c3c1e.gif)
 <p align="center">
-![partbook](https://user-images.githubusercontent.com/29521447/152291608-bf829e23-c4f2-4f52-b389-edf54366c97a.svg)
+<img src="![partbook](https://user-images.githubusercontent.com/29521447/152291751-6998b7b8-d774-46ae-bea8-e21c3739e90a.png)">
+
+
 </p>
 
 ## About Laravel
