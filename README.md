@@ -1,3 +1,4 @@
+![Screen Recording 2022-02-03 at 12 59 15 PM](https://user-images.githubusercontent.com/29521447/152290599-b5e2b594-8e51-4f67-915e-dfa3088c3c1e.gif)
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
