@@ -13,6 +13,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 <p align="center">![Screen Shot 2022-02-03 at 1 43 10 PM](https://user-images.githubusercontent.com/29521447/152294002-f855f1f9-da3b-42c2-9d6d-7b5e62920471.png)
+![Screen Shot 2022-02-03 at 3 50 03 PM](https://user-images.githubusercontent.com/29521447/152310739-2fae242a-f9c8-40af-a7bf-a03fdc8aecc2.png)
 
 <img border="1" src="https://user-images.githubusercontent.com/29521447/152292645-bf2e53e0-dcec-4c28-8124-ec77b7dd5254.gif" align="center">
 <img src="https://user-images.githubusercontent.com/29521447/152292645-bf2e53e0-dcec-4c28-8124-ec77b7dd5254.gif" align="center">
