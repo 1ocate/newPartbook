@@ -6,9 +6,9 @@
             </a>
         </x-slot>
         <div class="mb-3">
-            <h1 class="text-center text-xl mb-5">PartBook.ID</h1>
+            <!--<h1 class="text-center text-xl mb-5">PartBook.ID</h1>-->
             <p class="text-center mb-5">
-                Refensi Partbook untuk Mesin produksi anda dan Excell generator <br /><br />
+                <strong class="text-lg">Refensi Partbook untuk Mesin produksi anda dan Excell generator</strong> <br /><br />
                 Database dan Informasi Sparepart Mesin Produksi, beserta No Part terlengkap dan terupdate yang dapat bantu Kinerja Produksi, juga membantu dalam mempercepat untuk membuat list excel kebutuhan sparepart
             </p>
             <div class="text-center mb-5">

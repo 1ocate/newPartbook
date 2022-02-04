@@ -252,7 +252,7 @@
                 <div class="col-md">
                     <p class="text-justify">
                         * Masukan Isian data form ini sesuai urutan field yang diberikan, untuk mencegah kesalahan data <br />
-                        * Jika setelah menginput part no, lalu tidak terdapat Nama mesin, kemungkinan besar part no yang dimasukan salah. / khusus anda pabrik, dapat mengemail pada kami di <a href="mailto:info@partbook.id">info@partbook.id</a>
+                        * Jika setelah menginput part no, lalu tidak terdapat Nama mesin, kemungkinan besar part no yang dimasukan salah. / khusus anda pabrik, dapat mengemail pada kami di <a href="mailto:partbook.id@gmail.com">partbook.id@gmail.com</a>
                     </p>
                 </div>
 
